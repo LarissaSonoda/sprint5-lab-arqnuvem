@@ -24,6 +24,7 @@ jobs:
         run: |
           cd sprint5-lab/infra
           terraform init
+          terraform destroy -auto-approve
           terraform apply -auto-approve
       - name: Instalar Ansible
         run: |
