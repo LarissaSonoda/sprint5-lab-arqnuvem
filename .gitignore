@@ -1,0 +1,26 @@
+# Ignorar arquivos internos do Git (por segurança)
+.git/
+
+# Ignorar pasta do Terraform
+sprint5-lab/infra/.terraform/
+**/.terraform/*
+**/.terraform.lock.hcl
+
+# Ignorar arquivos binários do Terraform providers
+*.tfstate
+*.tfstate.backup
+*.log
+*.tfplan
+
+# Ignorar arquivos grandes e locais
+*.zip
+*.tar
+*.gz
+*.bak
+*.tmp
+*.swp
+
+# Ignorar chaves e credenciais
+*.pem
+*.key
+*.env
