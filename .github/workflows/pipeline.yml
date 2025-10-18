@@ -25,6 +25,18 @@ jobs:
           cd sprint5-lab/infra
           terraform init
           terraform apply -auto-approve
+      - name: Instalar Ansible
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ansible
+
+      - name: Configurar chave SSH para Ansible
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/lab7.pem
+          chmod 600 ~/.ssh/lab7.pem
+          ssh-keyscan -H 3.89.180.22 >> ~/.ssh/known_hosts
+          
       - name: Configurar EC2 com Ansible
         run: |
           cd sprint5-lab/ansible
