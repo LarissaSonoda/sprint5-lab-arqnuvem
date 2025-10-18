@@ -1,7 +1,7 @@
 import boto3, pandas as pd, os
 bucket = "lab-sprint5-arqnuvem-lari-sonoda"
 s3 = boto3.client("s3")
-local = "./data/sales.csv"
+local = "../data/sales.csv"
 # RAW
 s3.upload_file(local, bucket, "raw/sales.csv")
 # TRUSTED
