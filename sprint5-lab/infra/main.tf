@@ -15,7 +15,7 @@ resource "aws_instance" "app_server" {
  key_name = "lab7"
  instance_type = "t2.micro"
  tags = {
- Name = "Sprint5-EC2"
+ Name = "Sprint5-EC2-1"
  }
 }
 output "bucket_name" {
