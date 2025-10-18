@@ -30,7 +30,6 @@ jobs:
       - name: Instalar Ansible
         run: |
           sudo apt-get update
-          sudo amazon-linux-extras install ansible2 -y
           ansible --version
           pip3 install --user boto3
 
