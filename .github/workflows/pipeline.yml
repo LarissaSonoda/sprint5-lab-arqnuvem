@@ -2,7 +2,7 @@ name: Sprint5 Full Automation
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
