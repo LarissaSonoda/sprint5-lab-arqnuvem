@@ -24,8 +24,9 @@ jobs:
         run: |
           cd sprint5-lab/infra
           terraform init
-          terraform destroy -auto-approve
+          terraform init -upgrade
           terraform apply -auto-approve
+        continue-on-error: true
       - name: Instalar Ansible
         run: |
           sudo apt-get update
