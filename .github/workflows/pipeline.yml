@@ -38,7 +38,7 @@ jobs:
           mkdir -p ~/.ssh
           echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/lab7.pem
           chmod 600 ~/.ssh/lab7.pem
-          ssh-keyscan -H 3.89.180.22 >> ~/.ssh/known_hosts
+          ssh-keyscan -H 54.91.87.202 >> ~/.ssh/known_hosts
           
       - name: Configurar EC2 com Ansible
         run: |
