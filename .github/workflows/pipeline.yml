@@ -28,7 +28,8 @@ jobs:
       - name: Instalar Ansible
         run: |
           sudo apt-get update
-          sudo apt-get install -y ansible
+          sudo apt-get install -y ansible python3-pip
+          pip3 install --user boto3
 
       - name: Configurar chave SSH para Ansible
         run: |
