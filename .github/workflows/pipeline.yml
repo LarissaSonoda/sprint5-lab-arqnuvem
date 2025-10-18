@@ -31,7 +31,7 @@ jobs:
         run: |
           sudo apt-get update
           ansible --version
-          pip3 install --user boto3
+          pip3 install --user ansible==4.10.0 boto3
 
       - name: Configurar chave SSH para Ansible
         run: |
