@@ -17,13 +17,13 @@ jobs:
           aws-region: ${{ secrets.AWS_REGION }}
       - name: Terraform Apply
         run: |
-          cd infra
+          cd sprint5-lab/infra
           terraform init
           terraform apply -auto-approve
       - name: Configurar EC2 com Ansible
         run: |
-          cd ansible
+          cd sprint5-lab/ansible
           ansible-playbook -i inventory setup.yml
       - name: Executar pipeline de dados
         run: |
-          python scripts/data_pipeline.py
+          python sprint5-lab/scripts/data_pipeline.py
