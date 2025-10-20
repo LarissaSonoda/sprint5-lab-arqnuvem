@@ -47,6 +47,5 @@ jobs:
       - name: Executar pipeline de dados
         run: |
           pip3 install --user pandas boto3
-          ls -R
-          ls -a
+          pwd
           python sprint5-lab/scripts/data_pipeline.py
